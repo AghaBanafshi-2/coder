@@ -6,5 +6,8 @@ COPY . .
 
 RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
 
-# به جای اجرای خودکار اسکریپت، کانتینر را زنده نگه دار
+# نصب اسکریپت rubikaf به عنوان دستور سیستمی
+RUN cp /app/rubikaf /usr/local/bin/rubikaf && chmod +x /usr/local/bin/rubikaf
+
+# کانتینر را زنده نگه دار تا وارد کنسول شوی
 CMD ["sleep", "infinity"]
