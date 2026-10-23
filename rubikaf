@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# اسکریپت راه‌انداز Rubika Filter
+# استفاده: rubikaf run
+
+case "$1" in
+    run)
+        echo "🚀 در حال اجرای اسکریپت روبیکا..."
+        cd /app
+        python filter.py
+        ;;
+    *)
+        echo "استفاده صحیح: rubikaf run"
+        echo ""
+        echo "دستورات موجود:"
+        echo "  run    اجرای اسکریپت filter.py"
+        exit 1
+        ;;
+esac
